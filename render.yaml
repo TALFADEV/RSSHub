@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: rsshub
+    env: node
+    repo: https://github.com/DIYgod/RSSHub
+    branch: master
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CACHE_TYPE
+        value: memory
+    plan: free
